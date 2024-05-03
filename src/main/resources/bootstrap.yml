@@ -1,0 +1,11 @@
+spring:
+  config:
+    import=configserver:http://localhost:8081:
+  application:
+    name: shopping-service
+  cloud:
+    config:
+      enable: true
+      uri: http://localhost:8081
+      username: root
+      password: s3cr3t
