@@ -1,5 +1,6 @@
 package alvarado.com.shoppingservice.entity;
 
+import alvarado.com.shoppingservice.model.Product;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
@@ -20,6 +21,9 @@ public class InvoiceItem {
 
     @Column(name = "product_id")
     private Long productId;
+
+    @Transient
+    private Product product;
 
     @Transient
     private Double subtotal;
